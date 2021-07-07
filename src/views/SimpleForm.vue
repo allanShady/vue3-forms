@@ -32,20 +32,10 @@
   
         <h3>Are pets allowed?</h3>
         <div>
-          <base-radio
-            v-model="event.pets"
-            :value="1"
-            label="Yes"
+          <base-radio-group
+            :options="petOptions"
             name="pets"
-          />
-        </div>
-  
-        <div>
-          <base-radio
             v-model="event.pets"
-            :value="0"
-            label="No"
-            name="pets"
           />
         </div>
   
@@ -74,10 +64,11 @@ import BaseInput from '../components/BaseInput.vue'
 import BaseSelect from '../components/atoms/BaseSelect.vue'
 import BaseCheckbox from '../components/atoms/BaseCheckbox.vue'
 import BaseRadio from '../components/atoms/BaseRadio.vue'
+import BaseRadioGroup from '../components/molecules/BaseRadioGroup.vue'
 
 
   export default {
-  components: { BaseInput, BaseSelect, BaseCheckbox, BaseRadio },
+  components: { BaseInput, BaseSelect, BaseCheckbox, BaseRadio, BaseRadioGroup },
     data () {
       return {
         categories: [
@@ -99,7 +90,9 @@ import BaseRadio from '../components/atoms/BaseRadio.vue'
             catering: false,
             music: false
           }
-        }
+        },
+
+        petOptions: [{ label: 'Yes', value: 1 }, { label: 'No', value: 0 }]
       }
     }
   }
