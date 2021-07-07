@@ -2,14 +2,16 @@
     <component 
         v-for="option in options"
         :key="option.value"
-        :is="vertical ? 'div' : 'span'">
-    <base-radio
-        :label="option.label"
-        :value="option.value"
-        :name="name"
-        :modelValue="modelValue"
-        @update:modelValue="$emit('update:modelValue', $event)"
-    />
+        :is="vertical ? 'div' : 'span'"
+        :class="{ horizontal: !vertical }"
+    >
+        <base-radio
+            :label="option.label"
+            :value="option.value"
+            :name="name"
+            :modelValue="modelValue"
+            @update:modelValue="$emit('update:modelValue', $event)"
+        />
     </component>
 </template>
 
@@ -38,6 +40,12 @@ export default {
             default: false
         }
     }
-    
 }
 </script>
+
+<style scoped>
+    .horizontal {
+        margin-right: 1rem;
+    } 
+
+</style>
