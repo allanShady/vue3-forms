@@ -36,6 +36,7 @@
             :options="petOptions"
             name="pets"
             v-model="event.pets"
+            vertical
           />
         </div>
   
@@ -65,7 +66,6 @@ import BaseSelect from '../components/atoms/BaseSelect.vue'
 import BaseCheckbox from '../components/atoms/BaseCheckbox.vue'
 import BaseRadio from '../components/atoms/BaseRadio.vue'
 import BaseRadioGroup from '../components/molecules/BaseRadioGroup.vue'
-
 
   export default {
   components: { BaseInput, BaseSelect, BaseCheckbox, BaseRadio, BaseRadioGroup },

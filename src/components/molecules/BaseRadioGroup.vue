@@ -1,13 +1,16 @@
 <template>
-    <base-radio
+    <component 
         v-for="option in options"
         :key="option.value"
+        :is="vertical ? 'div' : 'span'">
+    <base-radio
         :label="option.label"
         :value="option.value"
         :name="name"
         :modelValue="modelValue"
         @update:modelValue="$emit('update:modelValue', $event)"
     />
+    </component>
 </template>
 
 <script>
@@ -29,6 +32,10 @@ export default {
         modelValue: {
             type: [String, Number],
             required: true
+        },
+        vertical: {
+            type: Boolean,
+            default: false
         }
     }
     
