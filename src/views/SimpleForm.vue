@@ -7,39 +7,45 @@
         :v-model="event.category"
         label="Select a category"
         :options="categories" />
-  
-        <h3>Name & describe your event</h3>
 
-        <base-input 
-          label="Title" 
-          v-model="event.title"
-          type="text"
-        />
-  
-        <base-input 
-          label="Description" 
-          v-model="event.description"
-          type="text"
-        />
-  
-        <h3>Where is your event?</h3>
+        <fieldset>
+          <legend>Name & describe your event</legend>
 
-        <base-input 
-          label="Location" 
-          v-model="event.location"
-          type="text"
-        />
-  
-        <h3>Are pets allowed?</h3>
-        <div>
-          <base-radio-group
-            :options="petOptions"
-            name="pets"
-            v-model="event.pets"
-            
+          <base-input 
+            label="Title" 
+            v-model="event.title"
+            type="text"
           />
-        </div>
+
+          <base-input 
+            label="Description" 
+            v-model="event.description"
+            type="text"
+          />
+        </fieldset>
   
+        <fieldset>
+          <legend>Where is your event?</legend>
+
+          <base-input 
+            label="Location" 
+            v-model="event.location"
+            type="text"
+          />
+        </fieldset>
+
+        <fieldset>
+          <legend>Pets</legend>
+          <p>Are pets allowed?</p>
+          <div>
+            <base-radio-group
+              :options="petOptions"
+              name="pets"
+              v-model="event.pets"
+            />
+          </div>
+        </fieldset>
+    
         <h3>Extras</h3>
         <div>
           <base-checkbox
@@ -54,7 +60,6 @@
             label="Live music"
           />
         </div>
-  
         <button class="button -fill-gradient" type="submit">Submit</button>
       </form>
     </div>
@@ -106,3 +111,17 @@ import axios from 'axios'
     }
   }
   </script>
+
+  <style scoped>
+    fieldset {
+      border: 0;
+      padding: 0;
+      margin: 0;
+    }
+
+    legend {
+      font-size: 28px;
+      font-weight: 700;
+      margin-top: 20px;
+    }
+  </style>
