@@ -15,6 +15,7 @@
             label="Title" 
             v-model="event.title"
             type="text"
+            error="Error occured"
           />
 
           <base-input 
