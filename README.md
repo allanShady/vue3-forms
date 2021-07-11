@@ -1,4 +1,4 @@
-# vue3 forms using atomic design
+# Vue3 forms using atomic design
 
 
 <p align="center">
@@ -25,10 +25,10 @@ Practice **vue 3** by building a simple combined with **atomic design**
 
 ## 🧘🏿‍ Covered content
 
-- [ x ] Atomic design
-  - [ x ] Atoms
-  - [ x ] Molecules
-- [ x ] Accessibility (a11y)
+- [x] Atomic design
+  - [x] Atoms
+  - [x] Molecules
+- [x] Accessibility (a11y)
 
 > The accessibility was the basic one.
 
