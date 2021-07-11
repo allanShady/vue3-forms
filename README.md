@@ -1,5 +1,6 @@
 # Vue3 forms using atomic design
 
+![recording](https://netlify-cocoon.netlify.app/.netlify/functions/fetch?code=307&path=eyJzaXRlX2lkIjoiOGY5OTBhMTEtMDhiNS00YTNkLTgwNmYtODRkZWMxNzA0ODA0IiwiZGVwbG95X2lkIjoiNjBlYTc3MDc4NTEyOTgwMDA3Y2UzNDZjIiwiaWQiOiJlYTYwN2VlYy1lMzBhLTRhMTYtYTZhNi1kMjFjM2NkYjlkMWMifQ==)
 
 <p align="center">
     <a href="#-idea">Idea</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
